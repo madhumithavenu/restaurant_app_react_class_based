@@ -5,6 +5,7 @@ export default class Restaurant extends Component {
         return(
             <div>
                 <h1>Restaurant Component</h1>
+                
             </div>
         )
     }
