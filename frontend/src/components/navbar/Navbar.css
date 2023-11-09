@@ -1,0 +1,23 @@
+.container {
+    background: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+}
+.booting{
+    margin-left: 10px;
+    
+}
+.navbar{
+    font-size: large;
+    font-weight: bold;
+}
+
+span a{
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}

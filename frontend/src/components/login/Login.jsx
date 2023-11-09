@@ -39,7 +39,8 @@ export default class Login extends Component {
     }
     render(){
         return(
-            <div>
+            <div className="pri">
+            <div className="content">
                 <h1>Login Component</h1>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <div className="wrapper">
@@ -52,6 +53,7 @@ export default class Login extends Component {
                         <button type="submit">Login</button>
                     </div>
                 </form>
+            </div>
             </div>
         )
     }

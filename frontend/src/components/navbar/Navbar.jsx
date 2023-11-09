@@ -9,13 +9,15 @@ export default class Navbar extends Component{
     return (
         <div className='container'>
            <div className='navbar'>
-                Madhu's Kitchen
+                Madhu's Kitchen  
+                <span className='booting'>
                 <Link to={"/login"}>
-                    <button className='btn'>Login</button>
+                    Login
                 </Link>
                 <Link to={"/restaurant"}>
-                    <button className='btn'>Restaurant</button>
+                    Restaurant
                 </Link>
+            </span>
             </div>
         </div>
     );
