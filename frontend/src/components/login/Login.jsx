@@ -2,9 +2,40 @@ import { Component } from "react";
 import './Login.css';
 
 export default class Login extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            errorMessage: '',
+        }
+    }
     handleSubmit(event) {
         event.preventDefault();
-       
+        let user = {
+            username: event.target.username.value,
+            password: event.target.password.value,
+        }
+        let backend_url = "http://localhost:3200/login";
+        let options = {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(user)
+        }
+        try{
+        fetch(backend_url, options)
+        .then((response)=>response.json())
+        .then((responseData)=>{
+            if (responseData.flag === true) {
+                window.location.href='/restaurant';
+            } else {
+                this.setState({errorMessage: responseData.msg})
+            }
+        }).catch(err=>{
+            console.error("Error",err)
+        })
+    }catch(err){
+        console.error("Error",err)
+    }
+     
     }
     render(){
         return(

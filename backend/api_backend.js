@@ -10,7 +10,7 @@ app.post("/login", (req, res)=>{
         username: req.body.username,
         password: req.body.password
     }
-    if (userData.username == 'madhu' && userData.password == 'madhu123'){
+    if (userData.username == 'madhu' && userData.password == 'abc123'){
         res.json({flag: true, msg: 'Login Success'});
     }
     else{
